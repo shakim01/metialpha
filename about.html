@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Meti Alpha</title>
   <style>
-    /* Root Variables */
+    /* Root Variables for Money-Themed Design */
     :root {
-      --primary-color: #1b5e20; /* Deep green */
-      --accent-color: #81c784; /* Lighter green */
+      --primary-color: #1b5e20; /* Deep money green */
+      --secondary-color: #ffd700; /* Gold color */
       --text-color: #fff;
-      --background-color: #f1f8e9; /* Light background for contrast */
-      --body-background: #e8f5e9; /* Soft green-gray gradient background */
+      --background-color: #f0f4c3; /* Soft background */
+      --body-background: linear-gradient(135deg, #1b5e20, #388e3c); /* Green gradient */
       --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       --header-font-size: 3rem;
       --subheader-font-size: 1.5rem;
       --body-font-size: 1.1rem;
     }
 
-    /* Body and General Styles */
+    /* General Styles */
     body {
       margin: 0;
       font-family: var(--font-family);
-      background-color: var(--body-background);
+      background: var(--body-background);
       color: #333;
       line-height: 1.6;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     nav {
@@ -43,10 +47,10 @@
     }
 
     nav a:hover {
-      color: var(--accent-color);
+      color: var(--secondary-color);
     }
 
-    /* Hero Section */
+    /* Hero Section with Money Theme */
     .hero {
       background: linear-gradient(to top right, #66bb6a, #388e3c);
       color: var(--text-color);
@@ -89,6 +93,8 @@
       font-size: var(--subheader-font-size);
       color: var(--primary-color);
       margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .about-content p {
@@ -99,6 +105,22 @@
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .cta-button {
+      background-color: var(--secondary-color);
+      color: #333;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: #ffcc00;
     }
 
     /* Footer Section */
@@ -187,6 +209,8 @@
       <h2>Our Commitment</h2>
       <p>We are committed to offering a transparent, ethical approach to trading and investing. Our priority is to ensure the best possible outcomes for our clients, supported by a culture of continuous learning, data analysis, and improvement.</p>
     </div>
+
+    <a href="contact.html" class="cta-button">Get in Touch</a>
   </div>
 
   <footer>
@@ -194,4 +218,3 @@
   </footer>
 </body>
 </html>
-
