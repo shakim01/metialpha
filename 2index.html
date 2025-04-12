@@ -2,11 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Meti Alpha</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Meti Alpha</title>
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --secondary: #66bb6a;
+      --light-bg: #f0fdf4;
+      --white: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: #333;
+    }
+
+    nav {
+      background-color: var(--primary);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 10px 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #dcedc8;
+    }
+
+    .about-section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-section h1 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary);
+      color: white;
+    }
+  </style>
 </head>
 <body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -14,13 +74,20 @@
     <a href="login.html">Login</a>
   </nav>
 
-  <section class="about">
+  <section class="about-section">
     <h1>About Meti Alpha</h1>
-    <p>Meti Alpha is a leading trading company offering smart investment solutions. We are dedicated to helping our clients make informed financial decisions through our expertise and innovative approach.</p>
+    <p>
+      Meti Alpha is a forward-thinking trading and investment company led by certified professionals. We specialize in retail trading, focusing on the Forex and Gold markets, with a proven track record of consistent results. 
+      <br /><br />
+      Our strategies are based on disciplined planning, deep analysis, and over a year of refined data. Through our investment services, we empower individuals and businesses to make intelligent financial decisions and grow wealth sustainably.
+      <br /><br />
+      Whether you're an experienced trader or just starting out, Meti Alpha provides tools, education, and expert guidance to support your journey toward financial independence.
+    </p>
   </section>
 
   <footer>
     <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
