@@ -4,38 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Meti Alpha</title>
-
   <style>
     :root {
-      --primary-color: #2e7d32;
-      --background-color: #f0fdf4;
+      --primary-green: #2e7d32;
+      --secondary-green: #66bb6a;
+      --light-green: #e8f5e9;
+      --white: #fff;
     }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--background-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      color: #333;
     }
 
     nav {
-      background-color: var(--primary-color);
+      background-color: rgba(46, 125, 50, 0.95);
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     nav a {
-      color: white;
+      color: var(--white);
       text-decoration: none;
       margin: 10px 20px;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #c8e6c9;
+      color: #dcedc8;
     }
 
     .login-container {
@@ -47,49 +52,69 @@
     }
 
     .login-box {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: var(--white);
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
       width: 100%;
-      max-width: 350px;
+      max-width: 400px;
       text-align: center;
     }
 
     .login-box h2 {
-      color: var(--primary-color);
-      margin-bottom: 20px;
+      color: var(--primary-green);
+      margin-bottom: 25px;
+      font-size: 1.8em;
     }
 
     input[type="text"],
     input[type="password"] {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1em;
     }
 
     button {
       width: 100%;
-      padding: 10px;
-      background-color: var(--primary-color);
+      padding: 12px;
+      background-color: var(--primary-green);
       color: white;
       border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      border-radius: 8px;
       font-weight: bold;
+      font-size: 1em;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #388e3c;
+      background-color: #1b5e20;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-weight: 500;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: var(--primary-color);
+      background-color: rgba(46, 125, 50, 0.95);
       color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        margin: 10px;
+        font-size: 0.9em;
+      }
+
+      .login-box h2 {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
@@ -108,7 +133,7 @@
       <input type="text" id="username" placeholder="Username" required>
       <input type="password" id="password" placeholder="Password" required>
       <button onclick="login()">Login</button>
-      <p id="message" style="color: red; margin-top: 10px;"></p>
+      <p id="message"></p>
     </div>
   </div>
 
@@ -125,8 +150,8 @@
       if (username === "admin" && password === "password") {
         message.style.color = "green";
         message.textContent = "Login successful!";
-        // Redirect or load user dashboard if needed
       } else {
+        message.style.color = "red";
         message.textContent = "Invalid username or password.";
       }
     }
