@@ -4,42 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Meti Alpha</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="login.html">Login</a>
-  </nav>
 
-  <section class="login-container">
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <p id="message"></p>
-  </section>
-
-  <script>
-    function login() {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const message = document.getElementById("message");
-
-      if (username === "admin" && password === "password") {
-        message.style.color = "green";
-        message.textContent = "Login successful!";
-      } else {
-        message.style.color = "red";
-        message.textContent = "Invalid username or password.";
-      }
+  <style>
+    :root {
+      --primary-color: #2e7d32;
+      --background-color: #f0fdf4;
     }
-  </script>
 
-  <footer>
-    <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #c8e6c9;
+    }
+
+    .login-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .login-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+    }
+
+    .login-box h2 {
