@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meti Alpha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meti Alpha - Precision Trading, Proven Results</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     :root {
       --primary-color: #2e7d32;
-      --accent-color: #66bb6a;
+      --secondary-color: #1b5e20;
+      --background-color: #f0fdf4;
       --text-color: #fff;
-      --background-color: #f4f4f4;
+      --highlight-color: #388e3c;
     }
 
     body {
@@ -17,19 +19,20 @@
       font-family: Arial, sans-serif;
       background-color: var(--background-color);
       color: #333;
+      overflow-x: hidden;
     }
 
     nav {
       background-color: var(--primary-color);
       display: flex;
       justify-content: center;
-      padding: 15px;
+      padding: 20px;
     }
 
     nav a {
       color: var(--text-color);
       text-decoration: none;
-      margin: 10px 20px;
+      margin: 0 20px;
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -40,19 +43,18 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(to right, #66bb6a, #388e3c);
+      padding: 120px 20px;
+      background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
       color: white;
-      border-bottom: 5px solid var(--primary-color);
     }
 
     .hero h1 {
-      font-size: 3em;
+      font-size: 4em;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 1.2em;
+      font-size: 1.5em;
       margin-bottom: 30px;
     }
 
@@ -70,21 +72,64 @@
       background-color: #c8e6c9;
     }
 
+    .section {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px auto;
+      padding: 0 20px;
+      max-width: 1200px;
+    }
+
+    .section .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 30%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .section .card h3 {
+      color: var(--primary-color);
+      font-size: 1.5em;
+    }
+
+    .section .card p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .section .card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       background-color: var(--primary-color);
       color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
     }
 
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.5em;
+      .section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section .card {
+        width: 80%;
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -92,11 +137,17 @@
     <a href="login.html">Login</a>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to Meti Alpha</h1>
     <p>Your trusted partner in smart trading and investment strategies.</p>
     <a class="cta-button" href="login.html">Get Started</a>
   </section>
 
-  <footer>
-    <p>&copy
+  <!-- Main Content Section -->
+  <section class="section">
+    <div class="card">
+      <img src="growth-icon.png" alt="Growth Icon" />
+      <h3>Expert Strategies</h3>
+      <p>Leverage proven trading strategies backed by data and experience to maximize your profits in the Forex and commodities markets.</p>
+    </div>
