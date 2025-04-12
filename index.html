@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>My Blog and Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,60 +11,45 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
+        /* Blog Styles */
         header {
             background: #333;
             color: white;
             text-align: center;
             padding: 1em;
         }
+
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
         }
+
         .post {
             background: white;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .post h2 {
             color: #333;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Blog</h1>
-    </header>
-    <div class="container">
-        {% for post in posts %}
-        <div class="post">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.content }}</p>
-        </div>
-        {% endfor %}
-    </div>
-      <title>Login Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
+
+        /* Login Page Styles */
         .login-container {
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            margin: 50px auto;
             text-align: center;
         }
+
         input {
             width: 100%;
             padding: 10px;
@@ -72,6 +57,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         button {
             width: 100%;
             padding: 10px;
@@ -81,12 +67,31 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #218838;
         }
     </style>
 </head>
 <body>
+
+    <!-- Blog Section -->
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+    <div class="container">
+        <!-- Example Post Loop (replace this with server-side templating, e.g., Django, Flask, etc.) -->
+        <div class="post">
+            <h2>Post Title 1</h2>
+            <p>This is the content of the first blog post.</p>
+        </div>
+        <div class="post">
+            <h2>Post Title 2</h2>
+            <p>This is the content of the second blog post.</p>
+        </div>
+    </div>
+
+    <!-- Login Page Section -->
     <div class="login-container">
         <h2>Login</h2>
         <input type="text" id="username" placeholder="Username" required>
@@ -109,5 +114,6 @@
             }
         }
     </script>
+
 </body>
 </html>
