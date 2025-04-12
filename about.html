@@ -93,6 +93,7 @@
       background: var(--primary-color);
     }
 
+    /* New comment section with square layout */
     .slider {
       position: relative;
       max-width: 1000px;
@@ -107,17 +108,28 @@
 
     .slide {
       min-width: 100%;
-      padding: 20px;
+      height: 300px; /* Square shape */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #388e3c;
       color: white;
       text-align: center;
       border-radius: 10px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      position: relative;
     }
 
     .slide p {
       font-size: 1.2em;
       line-height: 1.6;
+    }
+
+    .commentor-name {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 1.3em;
+      text-transform: uppercase;
     }
 
     footer {
@@ -183,13 +195,16 @@
   <section class="slider">
     <div class="slides">
       <div class="slide">
-        <p>"Meti Alpha has revolutionized my approach to trading. Their strategies are easy to follow and always spot on!" - John Doe</p>
+        <p>"Meti Alpha has revolutionized my approach to trading. Their strategies are easy to follow and always spot on!"</p>
+        <div class="commentor-name">TIKVAH WANJIRU</div>
       </div>
       <div class="slide">
-        <p>"The insights provided by Meti Alpha helped me grow my investment portfolio exponentially. Highly recommended!" - Jane Smith</p>
+        <p>"The insights provided by Meti Alpha helped me grow my investment portfolio exponentially. Highly recommended!"</p>
+        <div class="commentor-name">FAITH WAMBETI</div>
       </div>
       <div class="slide">
-        <p>"I've learned so much from Meti Alpha. Their trading methodology has made me a more confident trader." - Mark Johnson</p>
+        <p>"I've learned so much from Meti Alpha. Their trading methodology has made me a more confident trader."</p>
+        <div class="commentor-name">KEVI KARANI</div>
       </div>
     </div>
   </section>
