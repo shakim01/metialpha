@@ -4,7 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meti Alpha</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary-color: #2e7d32;
+      --text-color: #fff;
+      --background-color: #f0fdf4;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: #333;
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 10px 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c8e6c9;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to bottom right, #66bb6a, #388e3c);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: white;
+      color: var(--primary-color);
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #c8e6c9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary-color);
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      nav a {
+        margin: 10px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
