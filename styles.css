@@ -1,3 +1,4 @@
+/* Global styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -22,11 +23,22 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero {
+footer {
+  text-align: center;
+  padding: 20px;
   background-color: #333;
+  color: white;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('images/XAUUSD_2025-04-01.png');
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 100px 20px;
   text-align: center;
+  font-size: 2rem;
 }
 
 .cta-button {
@@ -36,12 +48,32 @@ nav a:hover {
   border: none;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .cta-button:hover {
   background-color: #218838;
 }
 
+/* About section */
+.about {
+  background-image: url('images/XAUUSD_2025-04-02.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about p {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Blog Section */
 .container {
   width: 80%;
   margin: auto;
@@ -56,6 +88,7 @@ nav a:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Login section */
 .login-container {
   background-color: white;
   padding: 30px;
@@ -81,11 +114,4 @@ button {
 
 button:hover {
   background-color: #218838;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
 }
