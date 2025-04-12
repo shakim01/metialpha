@@ -146,6 +146,18 @@
       color: var(--secondary-color);
     }
 
+    .package-card .math {
+      font-size: 1em;
+      margin-top: 20px;
+      color: #ddd;
+    }
+
+    .package-card .withdrawal {
+      font-size: 1em;
+      margin-top: 10px;
+      color: var(--highlight-color);
+    }
+
     /* Footer Section */
     footer {
       background-color: var(--footer-background);
@@ -208,7 +220,7 @@
   <section class="hero">
     <h1>Investment Packages at Meti Alpha</h1>
     <p>Choose from our tailored investment plans designed to maximize your returns with smart trading strategies</p>
-    <a href="login.html" class="cta-button">Start Investing</a>
+    <a href="#investment-packages" class="cta-button">Start Investing</a>
   </section>
 
   <!-- About Section - Investment Packages -->
@@ -219,18 +231,22 @@
         At Meti Alpha, we offer exclusive investment packages designed to help you maximize your returns. Whether you’re just starting or looking to take your investments to the next level, our packages are carefully crafted to suit your goals. With an expected return of **40% every week**, our strategy focuses on smart, disciplined trading in global markets.
       </p>
       <p>
-        Explore our different packages below to find the one that best fits your investment needs.
+        Explore our different packages below to find the one that best fits your investment needs. All withdrawals are processed on a bi-weekly basis.
       </p>
     </div>
 
     <!-- Investment Packages -->
-    <div class="investment-packages">
+    <div class="investment-packages" id="investment-packages">
       <!-- Silver Package -->
       <div class="package-card">
         <h3>Silver Package</h3>
         <p>Starting at just $100, this package is perfect for beginners who want to dip their toes into the world of trading.</p>
         <div class="price">$100</div>
         <div class="roi">Expected 40% ROI per week</div>
+        <div class="math">
+          <strong>Weekly Calculation:</strong> $100 x 40% = <strong>$40</strong> (weekly return)
+        </div>
+        <div class="withdrawal">Withdraw every 2 weeks</div>
       </div>
 
       <!-- Gold Package -->
@@ -239,6 +255,10 @@
         <p>For those looking to invest more, the Gold Package offers advanced strategies with a higher return potential.</p>
         <div class="price">$500</div>
         <div class="roi">Expected 40% ROI per week</div>
+        <div class="math">
+          <strong>Weekly Calculation:</strong> $500 x 40% = <strong>$200</strong> (weekly return)
+        </div>
+        <div class="withdrawal">Withdraw every 2 weeks</div>
       </div>
 
       <!-- Platinum Package -->
@@ -247,10 +267,17 @@
         <p>For serious investors, the Platinum Package provides the most advanced trading strategies and higher capital allocation.</p>
         <div class="price">$1000</div>
         <div class="roi">Expected 40% ROI per week</div>
+        <div class="math">
+          <strong>Weekly Calculation:</strong> $1000 x 40% = <strong>$400</strong> (weekly return)
+        </div>
+        <div class="withdrawal">Withdraw every 2 weeks</div>
       </div>
     </div>
   </section>
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 Met
+    <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
+  </footer>
+</body>
+</html>
