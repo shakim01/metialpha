@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Meti Alpha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <section class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="message"></p>
+  </section>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      if (username === "admin" && password === "password") {
+        message.style.color = "green";
+        message.textContent = "Login successful!";
+      } else {
+        message.style.color = "red";
+        message.textContent = "Invalid username or password.";
+      }
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
+  </footer>
+</body>
+</html>
