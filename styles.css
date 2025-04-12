@@ -30,16 +30,6 @@ footer {
   color: white;
 }
 
-/* Hero section */
-.hero {
-  background-image: url('images/XAUUSD_2025-04-01.png');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-  font-size: 2rem;
-}
 
 .cta-button {
   background-color: #28a745;
@@ -53,16 +43,6 @@ footer {
 
 .cta-button:hover {
   background-color: #218838;
-}
-
-/* About section */
-.about {
-  background-image: url('images/XAUUSD_2025-04-02.png');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
 }
 
 .about p {
