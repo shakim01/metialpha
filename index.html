@@ -1,192 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meti Alpha - Empowering Your Investment Journey</title>
-  <style>
-    :root {
-      --primary-color: #0A5A39; /* Dark green */
-      --secondary-color: #F0B90B; /* Bright gold */
-      --background-color: #181818; /* Dark background */
-      --text-color: #fff; /* White text */
-      --highlight-color: #FFCC00; /* Bright yellow for highlights */
-      --card-background: #222222; /* Dark gray card background */
-      --footer-background: #131313; /* Footer background */
-      --nav-background: #121212; /* Navigation bar background */
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Meti Alpha - Investment Website</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #66bb6a;
+            --highlight-color: #ffc107;
+            --text-color: #fff;
+            --background-color: #f0fdf4;
+            --footer-color: #222;
+        }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+            color: #333;
+        }
 
-    /* Navigation Bar */
-    nav {
-      background-color: var(--nav-background);
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 30px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        nav {
+            background-color: var(--footer-color);
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
 
-    nav a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 20px;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-    }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1em;
+        }
 
-    nav a:hover {
-      color: var(--highlight-color);
-    }
+        nav a:hover {
+            color: var(--highlight-color);
+        }
 
-    /* Hero Section (Welcome Note) */
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-      color: var(--text-color);
-      margin-bottom: 50px;
-    }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
 
-    .hero h1 {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-    }
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
 
-    .hero p {
-      font-size: 1.4em;
-      margin-bottom: 30px;
-    }
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+        }
 
-    .cta-button {
-      background-color: var(--secondary-color);
-      color: var(--nav-background);
-      padding: 15px 30px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2em;
-      transition: background-color 0.3s ease;
-    }
+        .cta-button {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
 
-    .cta-button:hover {
-      background-color: var(--highlight-color);
-      color: var(--text-color);
-    }
+        .cta-button:hover {
+            background-color: #c8e6c9;
+        }
 
-    /* About Section - Two Columns Layout */
-    .about-section {
-      display: flex;
-      justify-content: space-between;
-      padding: 60px 20px;
-      margin-bottom: 50px;
-      max-width: 1200px;
-      margin: auto;
-    }
+        .investment-packages {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
 
-    .about-text {
-      width: 45%;
-      font-size: 1.1em;
-      line-height: 1.7;
-    }
+        .investment-card {
+            background: var(--primary-color);
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-    .about-text h2 {
-      color: var(--primary-color);
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+        .investment-card h3 {
+            font-size: 1.5em;
+            color: var(--highlight-color);
+        }
 
-    .about-text p {
-      color: #ddd;
-    }
+        .investment-card p {
+            font-size: 1.2em;
+            color: white;
+        }
 
-    .about-image {
-      width: 45%;
-      background: url('https://via.placeholder.com/500') no-repeat center center;
-      background-size: cover;
-      height: 300px;
-      border-radius: 10px;
-    }
+        .investment-card .amount {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--highlight-color);
+        }
 
-    /* Footer Section */
-    footer {
-      background-color: var(--footer-background);
-      color: var(--text-color);
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 1em;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--footer-color);
+            color: white;
+        }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .about-section {
-        flex-direction: column;
-        align-items: center;
-      }
+        footer p {
+            font-size: 0.9em;
+        }
 
-      .about-text,
-      .about-image {
-        width: 90%;
-        margin-bottom: 20px;
-      }
-
-      .hero h1 {
-        font-size: 2.5em;
-      }
-
-      .hero p {
-        font-size: 1.2em;
-      }
-
-      nav a {
-        font-size: 1em;
-        margin: 0 15px;
-      }
-    }
-  </style>
+    </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="login.html">Login</a>
-  </nav>
 
-  <!-- Hero Section (Welcome Note) -->
-  <section class="hero">
-    <h1>Welcome to Meti Alpha</h1>
-    <p>Your trusted partner in smart trading and investment strategies</p>
-    <a href="login.html" class="cta-button">Get Started</a>
-  </section>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="investment.html">Investment</a>
+        <a href="blog.html">Blog</a>
+        <a href="login.html">Login</a>
+    </nav>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-text">
-      <h2>About Meti Alpha</h2>
-      <p>
-        At Meti Alpha, we specialize in strategic, data-driven trading with a focus on the global Forex and commodities markets. Led by Anthony Mwangi, a certified trader with a track record of consistent performance, our mission is to empower retail traders and investors with actionable insights, disciplined trading methodologies, and cutting-edge market analysis.
-      </p>
-      <p>
-        With years of experience and a solid trading framework, we don’t just follow trends — we anticipate them. Whether you're a beginner looking to learn the ropes or a seasoned trader seeking a performance edge, Meti Alpha is your trusted partner in navigating the financial markets.
-      </p>
-    </div>
-    <div class="about-image"></div>
-  </section>
+    <section class="hero">
+        <h1>Welcome to Meti Alpha</h1>
+        <p>Your trusted partner in smart trading and investment strategies.</p>
+        <a class="cta-button" href="investment.html">Start Investing</a>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
-  </footer>
+    <section class="investment-packages">
+        <div class="investment-card">
+            <h3>Silver Package</h3>
+            <p>Investment Amount: $100</p>
+            <p class="amount">Expected Return: $140 (after 2 weeks)</p>
+            <p>Weekly Interest: 40%</p>
+            <a href="investment.html" class="cta-button">Choose Silver</a>
+        </div>
+
+        <div class="investment-card">
+            <h3>Gold Package</h3>
+            <p>Investment Amount: $500</p>
+            <p class="amount">Expected Return: $700 (after 2 weeks)</p>
+            <p>Weekly Interest: 40%</p>
+            <a href="investment.html" class="cta-button">Choose Gold</a>
+        </div>
+
+        <div class="investment-card">
+            <h3>Platinum Package</h3>
+            <p>Investment Amount: $1000</p>
+            <p class="amount">Expected Return: $1400 (after 2 weeks)</p>
+            <p>Weekly Interest: 40%</p>
+            <a href="investment.html" class="cta-button">Choose Platinum</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
