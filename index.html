@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog and Login</title>
+    <title>Meti Alpha - Trading with Confidence</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,14 +14,66 @@
             background-color: #f4f4f4;
         }
 
-        /* Blog Styles */
         header {
-            background: #333;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 1em;
         }
 
+        h1 {
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #28a745;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #218838;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .hero h2 {
+            font-size: 2em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .cta-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
+        /* Blog Section */
         .container {
             width: 80%;
             margin: auto;
@@ -39,7 +93,7 @@
             color: #333;
         }
 
-        /* Login Page Styles */
+        /* Login Section */
         .login-container {
             background: white;
             padding: 20px;
@@ -71,29 +125,62 @@
         button:hover {
             background-color: #218838;
         }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
     </style>
 </head>
+
 <body>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="#login">Login</a>
+    </nav>
+
+    <!-- Hero Section (Call to Action) -->
+    <div class="hero" id="hero">
+        <h2>Welcome to Meti Alpha</h2>
+        <p>Your trusted partner for trading and investing with precision.</p>
+        <a href="#login" class="cta-button">Get Started</a>
+    </div>
+
     <!-- Blog Section -->
-    <header>
-        <h1>Welcome to My Blog</h1>
-    </header>
-    <div class="container">
-        <!-- Example Post Loop (replace this with server-side templating, e.g., Django, Flask, etc.) -->
+    <div class="container" id="blog">
+        <header>
+            <h1>Our Latest Blog Posts</h1>
+        </header>
+
+        <!-- Example Blog Posts (replace with dynamic content in your backend) -->
         <div class="post">
-            <h2>Post Title 1</h2>
-            <p>This is the content of the first blog post.</p>
+            <h2>How to Get Started with Forex Trading</h2>
+            <p>Forex trading is an exciting and dynamic market that can provide opportunities for high returns. Learn how to get started with essential tips and strategies.</p>
         </div>
         <div class="post">
-            <h2>Post Title 2</h2>
-            <p>This is the content of the second blog post.</p>
+            <h2>Why Gold is a Safe Haven Investment</h2>
+            <p>Gold has been a trusted asset for centuries. In this article, we explain why investing in gold can be a smart choice, especially during times of uncertainty.</p>
         </div>
     </div>
 
-    <!-- Login Page Section -->
-    <div class="login-container">
-        <h2>Login</h2>
+    <!-- Login Section -->
+    <div class="login-container" id="login">
+        <h2>Login to Your Account</h2>
         <input type="text" id="username" placeholder="Username" required>
         <input type="password" id="password" placeholder="Password" required>
         <button onclick="login()">Login</button>
@@ -115,5 +202,11 @@
         }
     </script>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Meti Alpha | <a href="https://www.metialpha.com">Visit Our Website</a></p>
+    </footer>
+
 </body>
+
 </html>
