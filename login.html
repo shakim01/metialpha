@@ -57,3 +57,79 @@
     }
 
     .login-box h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary-color);
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login to Meti Alpha</h2>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+      <p id="message" style="color: red; margin-top: 10px;"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      if (username === "admin" && password === "password") {
+        message.style.color = "green";
+        message.textContent = "Login successful!";
+        // Redirect or load user dashboard if needed
+      } else {
+        message.textContent = "Invalid username or password.";
+      }
+    }
+  </script>
+</body>
+</html>
