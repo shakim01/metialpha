@@ -3,103 +3,106 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Investment Dashboard</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Meti Alpha - Investment</title>
     <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #66bb6a;
+            --highlight-color: #ffc107;
+            --text-color: #fff;
+            --background-color: #f0fdf4;
+            --footer-color: #222;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background: linear-gradient(to bottom right, #2e7d32, #66bb6a);
-            color: white;
+            background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+            color: #333;
         }
 
         nav {
-            background-color: #222;
+            background-color: var(--footer-color);
             display: flex;
             justify-content: space-around;
             padding: 20px;
         }
 
         nav a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
             font-size: 1.1em;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
+        nav a:hover {
+            color: var(--highlight-color);
+        }
+
+        .investment-container {
+            padding: 40px;
+            background: white;
+            margin: 30px auto;
+            width: 80%;
             border-radius: 10px;
-        }
-
-        .investment-header {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-bottom: 40px;
         }
 
-        .investment-details {
+        .investment-container h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+        }
+
+        .investment-info {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 30px;
+            margin-top: 30px;
         }
 
-        .investment-card {
-            background: #1b5e20;
-            padding: 20px;
+        .package-card {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px;
             width: 30%;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
-        .investment-card h3 {
+        .package-card h3 {
             font-size: 1.5em;
         }
 
-        .investment-card p {
+        .package-card p {
             font-size: 1.2em;
         }
 
-        .investment-card .amount {
+        .package-card .amount {
             font-size: 1.8em;
             font-weight: bold;
-            color: #ffc107;
-        }
-
-        .buttons-container {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 30px;
+            color: var(--highlight-color);
         }
 
         .cta-button {
-            padding: 12px 24px;
-            background-color: #4caf50;
-            border-radius: 5px;
+            background-color: var(--highlight-color);
             color: white;
-            font-weight: bold;
+            padding: 10px 20px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
         }
 
         .cta-button:hover {
-            background-color: #388e3c;
+            background-color: var(--primary-color);
         }
 
-        .cta-button:disabled {
-            background-color: #8e8e8e;
-            cursor: not-allowed;
-        }
-
-        .total-return {
+        footer {
             text-align: center;
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #ffc107;
-            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--footer-color);
+            color: white;
         }
+
     </style>
 </head>
 <body>
@@ -107,69 +110,17 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
+        <a href="investment.html">Investment</a>
         <a href="blog.html">Blog</a>
         <a href="login.html">Login</a>
     </nav>
 
-    <div class="container">
-        <div class="investment-header">
-            <h1>Your Investment Dashboard</h1>
-            <p>View your investment details and manage your account.</p>
-        </div>
-
-        <div class="investment-details">
-            <!-- Investment Cards -->
-            <div class="investment-card">
+    <div class="investment-container">
+        <h1>Choose Your Investment Package</h1>
+        <div class="investment-info">
+            <div class="package-card">
                 <h3>Silver Package</h3>
                 <p>Investment Amount: $100</p>
                 <p class="amount">Expected Return: $140 (after 2 weeks)</p>
                 <p>Weekly Interest: 40%</p>
-            </div>
-
-            <div class="investment-card">
-                <h3>Gold Package</h3>
-                <p>Investment Amount: $500</p>
-                <p class="amount">Expected Return: $700 (after 2 weeks)</p>
-                <p>Weekly Interest: 40%</p>
-            </div>
-
-            <div class="investment-card">
-                <h3>Platinum Package</h3>
-                <p>Investment Amount: $1000</p>
-                <p class="amount">Expected Return: $1400 (after 2 weeks)</p>
-                <p>Weekly Interest: 40%</p>
-            </div>
-        </div>
-
-        <div class="buttons-container">
-            <a href="deposit.html" class="cta-button">Deposit</a>
-            <a href="withdrawal.html" class="cta-button">Withdraw</a>
-        </div>
-
-        <div class="total-return">
-            <p>Your current balance: $<span id="current-balance">0</span></p>
-            <p>Your total return after 2 weeks will be: $<span id="expected-return">0</span></p>
-        </div>
-    </div>
-
-    <script>
-        // Example calculation logic
-        const packages = {
-            silver: { amount: 100, interestRate: 0.40 },
-            gold: { amount: 500, interestRate: 0.40 },
-            platinum: { amount: 1000, interestRate: 0.40 }
-        };
-
-        function updateInvestmentDetails(packageType) {
-            const selectedPackage = packages[packageType];
-            const expectedReturn = selectedPackage.amount * (1 + selectedPackage.interestRate);
-            document.getElementById('current-balance').innerText = selectedPackage.amount;
-            document.getElementById('expected-return').innerText = expectedReturn;
-        }
-
-        // Default package selection (Silver)
-        updateInvestmentDetails('silver');
-    </script>
-
-</body>
-</html>
+                <a href="payment.html" class
