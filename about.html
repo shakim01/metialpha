@@ -6,10 +6,10 @@
   <title>About | Meti Alpha</title>
   <style>
     :root {
-      --primary-color: #0d47a1;
-      --accent-color: #64b5f6;
+      --primary-color: #1b5e20; /* Deep green */
+      --accent-color: #81c784; /* Lighter green */
       --text-color: #fff;
-      --background-color: #e3f2fd;
+      --background-color: #f1f8e9; /* Light background for contrast */
     }
 
     body {
@@ -35,16 +35,17 @@
     }
 
     nav a:hover {
-      color: #c8e6c9;
+      color: var(--accent-color);
     }
 
     .about-container {
       max-width: 1100px;
       margin: 60px auto;
       padding: 60px 40px;
-      background: linear-gradient(to top right, #0d47a1, #64b5f6);
+      background: linear-gradient(to top right, #66bb6a, #388e3c); /* Shiny green gradient */
       color: white;
       border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .about-content {
@@ -54,7 +55,7 @@
 
     .about-content h1 {
       font-size: 2.8em;
-      color: var(--primary-color);
+      color: white;
       margin-bottom: 25px;
     }
 
@@ -100,4 +101,40 @@
         padding: 30px 20px;
       }
 
-      .
+      .about-content h1 {
+        font-size: 2em;
+      }
+
+      .about-content p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <div class="about-container">
+    <div class="about-content">
+      <h1>Welcome to Meti Alpha – Precision Trading, Proven Results</h1>
+      <p>At Meti Alpha, we specialize in strategic, data-driven trading with a focus on the global Forex and commodities markets. Led by Anthony Mwangi, a certified trader with a track record of consistent performance, our mission is to empower retail traders and investors with actionable insights, disciplined trading methodologies, and cutting-edge market analysis.</p>
+      <p>With years of experience and a solid trading framework, we don’t just follow trends — we anticipate them. Whether you're a beginner looking to learn the ropes or a seasoned trader seeking a performance edge, Meti Alpha is your trusted partner in navigating the financial markets.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
+  </footer>
+</body>
+</html>
