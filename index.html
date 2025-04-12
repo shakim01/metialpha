@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meti Alpha | Smart Trading & Investment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Meti Alpha</title>
   <style>
     :root {
       --primary: #2e7d32;
       --secondary: #66bb6a;
-      --light-bg: #f0fdf4;
+      --background: #f0fdf4;
       --white: #fff;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--light-bg);
+      background-color: var(--background);
       color: #333;
     }
 
@@ -23,8 +23,8 @@
       background-color: var(--primary);
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       padding: 15px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -32,81 +32,63 @@
       text-decoration: none;
       margin: 10px 20px;
       font-weight: bold;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
       color: #dcedc8;
     }
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, var(--secondary), var(--primary));
-      color: white;
+    .blog-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.3em;
+    .blog-post {
+      background-color: var(--white);
       margin-bottom: 30px;
+      padding: 20px;
+      border-left: 6px solid var(--primary);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
-    .cta-button {
-      background-color: white;
+    .blog-post h2 {
       color: var(--primary);
-      padding: 12px 24px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555;
+      margin-top: 15px;
+      border-left: 4px solid var(--secondary);
+      padding-left: 15px;
+    }
+
+    .blog-post img {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #c8e6c9;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 60px 20px;
-      background-color: #ffffff;
-    }
-
-    .feature-card {
-      background: #f9f9f9;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-width: 300px;
-      text-align: center;
-    }
-
-    .feature-card h3 {
-      color: var(--primary);
-      margin-bottom: 15px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       background-color: var(--primary);
-      color: white;
+      color: var(--white);
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2em;
+    @media (max-width: 600px) {
+      .blog-post {
+        padding: 15px;
       }
-      .features {
-        flex-direction: column;
-        align-items: center;
+
+      .blog-post h2 {
+        font-size: 1.5em;
+      }
+
+      .quote {
+        font-size: 0.9em;
       }
     }
   </style>
@@ -120,26 +102,31 @@
     <a href="login.html">Login</a>
   </nav>
 
-  <section class="hero">
-    <h1>Welcome to Meti Alpha</h1>
-    <p>Your trusted partner in smart trading and investment strategies.</p>
-    <a class="cta-button" href="login.html">Get Started</a>
-  </section>
+  <div class="blog-container">
+    <!-- Blog Post 1 -->
+    <div class="blog-post">
+      <h2>Discipline in Trading</h2>
+      <p>One of the greatest keys to success in trading is maintaining discipline. Every decision should be driven by logic and strategy—not emotion.</p>
+      <div class="quote">"Discipline is the bridge between goals and accomplishment." – Jim Rohn</div>
+      <img src="https://tse1.mm.bing.net/th?id=OIP.-3t72xYAP9yg3PqYdj4eJAHaEK&pid=Api" alt="Forex Trading Graph">
+    </div>
 
-  <section class="features">
-    <div class="feature-card">
-      <h3>Smart Trading</h3>
-      <p>Harness advanced trading tools, strategies, and insights tailored for Forex & Gold.</p>
+    <!-- Blog Post 2 -->
+    <div class="blog-post">
+      <h2>The Power of Data</h2>
+      <p>We believe in making data-driven decisions. At Meti Alpha, every trade is backed by consistent analysis and years of market experience.</p>
+      <div class="quote">"Without data, you're just another person with an opinion." – W. Edwards Deming</div>
+      <img src="https://tse1.mm.bing.net/th?id=OIP.D3gYj85weqnU_nHBsE82CQHaDZ&pid=Api" alt="Abstract Forex Data">
     </div>
-    <div class="feature-card">
-      <h3>Expert Analysis</h3>
-      <p>Get daily insights from certified traders to help you make informed decisions.</p>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-post">
+      <h2>Confidence through Strategy</h2>
+      <p>A well-structured plan gives our traders confidence. Every market move is calculated and aligned with a higher goal.</p>
+      <div class="quote">"Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat." – Sun Tzu</div>
+      <img src="https://tse2.mm.bing.net/th?id=OIP.sAhzSshdkXOFstqhiSWbpwHaEK&pid=Api" alt="Trader Confidence">
     </div>
-    <div class="feature-card">
-      <h3>Investment Services</h3>
-      <p>We help you grow your money securely through strategic and ethical investing.</p>
-    </div>
-  </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 Meti Alpha. All rights reserved.</p>
